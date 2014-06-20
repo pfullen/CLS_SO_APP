@@ -140,7 +140,8 @@ $('#tablebody').on('mouseleave','li', function () {
 			
 				'<button class="button" id="deleteButton">' +
 				'</button>' +
-				'</div>' 
+				'</div>' +
+				'<br>'
 				
 			
 				 
