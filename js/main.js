@@ -131,7 +131,7 @@ $('#tablebody').on('mouseleave','li', function () {
 			'<ul >'+
 				'<li  >'+ itemValue +
 				'</li>'+
-				'<li  >'+ qtyValue +
+				'<li  class"qty">'+ qtyValue +
 				'</li>' +
 					
 				'</ul>' +
@@ -142,6 +142,7 @@ $('#tablebody').on('mouseleave','li', function () {
 				'</button>' +
 				'</div>' +
 				'<br>'
+				
 			
 				 
 			);

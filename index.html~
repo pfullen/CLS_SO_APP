@@ -107,8 +107,9 @@
 	
   <br>
   <br>
-  Qty   <input id="qty" type = "text" name="qty" align = "center"> 
-</select>
+  </select>
+  Qty   <input id="qty" type = "text" name="qty" align = "center" label="qty"> 
+
         	<br>
     			</div>
         		<button class="add2" id="formadd">  Add Item </button>

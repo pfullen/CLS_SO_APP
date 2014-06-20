@@ -164,7 +164,7 @@ width:1200px;
   color: #C00000;
   text-align: center;
   background-color: #E1E1E2;
-  min-height: 150%;
+  min-height: auto;
   position: relative;
   margin: 0 auto;
   margin-bottom: 0px;
@@ -259,13 +259,15 @@ padding-bottom: 2px;
 
 }
 
+
+/*
 #tablebody ul  {
 width: 400px;
-margin-left: 65px;
+margin-left: 50px;
 display: inline;
 
 }
-
+*/
 
 
 .row {
@@ -293,9 +295,9 @@ width: 600px;
 }
 
 #tablebody  {
-width: 500px;
-margin: 0 auto;
 
+
+margin: 0 auto;
 
 
 
@@ -303,23 +305,35 @@ margin: 0 auto;
 }
 
 #tablebody ul {
-padding-bottom:  15px;
-padding-top: -5px;
-	
-	
-	
+padding-bottom:  0px;
+padding-top: 5px;
+padding-right: 0px;
+text-align: left;
+display: inline;
+
+	width: 500px;
 }
 
 
 li {
-	min-width: 90px;
+	min-width: 125px;
 text-decoration: none;
 display: inline-block;
 font-size: 1em;
 font-family: Oswald,  Arial, sans-serif;
-margin: 0 20px;
-text-align: center;
+margin: 0 12px;
+text-align: left;
+
 }
+
+#tablebody li {
+
+
+
+
+}
+
+
 
 
  .backgroundcolor {
@@ -357,10 +371,13 @@ margin: 10px;
 }
 
 
+
+
+
 button {
 
 padding:5px;
-margin: 10px 10px;
+margin: 5px 10px;
 
 border-radius:5px;
 background-color: #b8c6df;
@@ -371,13 +388,16 @@ background-color: #b8c6df;
 #editButton  {
 background-image: url('../images/edit.png');
 background-repeat: no-repeat;
-margin-left: 10px;
+
 width: 20px;
 height: 20px;
 padding: 0;
 background-color: #fcf7ab;
 box-shadow:none;
 border:none;
+margin-top: 5px;
+
+margin-left: -90px;
 
 }
 
@@ -392,6 +412,7 @@ background-color: #fcf7ab;
 box-shadow: none;
 border:none;
 margin-left: 10px;
+margin-top: 5px;
 
 }
 
@@ -426,8 +447,8 @@ box-shadow: none;
 
 }
 
-#qty {
-
+li #qty {
+text-align: left;
 width: 20px;
 margin-right: 10px;
 }
@@ -457,6 +478,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8c6df', end
 font-family: Oswell, sans-serif;
 font-weight: bold;
 +box-shadow: 10px 10px 5px #888888;
+
 }
 
 
@@ -467,6 +489,7 @@ padding:  5px;
 padding-bottom: 2px;
 padding-left: 10px;
 align:center;
+display: inline-block;
 
 }
 
@@ -474,9 +497,10 @@ input {
 	border-radius:5px;
 width:80px;	
 margin: 0 auto;
-margin-left: 35px;
-padding:25px;
+margin-left: 5px;
+
 padding:5px;
+
 margin-bottom: 15px;
 text-align: center;
 
@@ -488,6 +512,8 @@ select {
 border-radius: 5px;
 padding:5px;
 width:200px;
+margin-left: 10px;
+margin-right: 20px;
 }
 
 
@@ -519,12 +545,22 @@ display: block;
 
 }
 
-
 #cancel {
-margin-left: 10px;
+
+margin-right:75px;
 padding: 5px;
+}
+
+
+.qty {
+
+margin-left: 10px;
+width: 15px;
+
 
 }
+
+
 
  #tbdata {
 	height: 600px;
@@ -553,7 +589,7 @@ text-align: center;
 color: gray;
 font-size: .75em;
 font-family: Arial, sans-serif;
-padding-top: 10px;
+padding-top: 25px;
 
 
 
