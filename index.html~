@@ -81,7 +81,7 @@
         	
         	<form id="form1" name="form1" method="post" action="">
         	<div class="input">
-		Item	
+	
         	<select align= "center">
   <option value="FLAT SHEET">FLAT SHEET</option>
   <option value="FITTED SHEET">FITTED SHEET</option>
@@ -121,7 +121,7 @@
 		
 		
         <footer> 
-				<p>  &copy 2014  Nautical Ambitions </p>
+				<p>  &copy 2014  CLS Medical,LLC  All Rights Reserved  </p>
         
           </footer>
         

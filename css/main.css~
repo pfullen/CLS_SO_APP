@@ -541,22 +541,16 @@ clear: both;
 position: fixed;
 bottom:0;
 width: 100%;
-height: 65px;
+height: 100px;
 
-background: #b8c6df; /* Old browsers */
-background: -moz-linear-gradient(top,  #b8c6df 0%, #6d88b7 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b8c6df), color-stop(100%,#6d88b7)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #b8c6df 0%,#6d88b7 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #b8c6df 0%,#6d88b7 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #b8c6df 0%,#6d88b7 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #b8c6df 0%,#6d88b7 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8c6df', endColorstr='#6d88b7',GradientType=0 ); /* IE6-9 */
+background: #222222; 
+
 
 }
 
 footer p {
 text-align: center;
-color: darkred;
+color: gray;
 font-size: .75em;
 font-family: Arial, sans-serif;
 padding-top: 10px;
