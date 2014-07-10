@@ -161,7 +161,7 @@ width:1200px;
 
  
   background-size:100% 150%;
-  width: 60%;
+  width: 50%;
   color: #C00000;
   text-align: center;
   background-color: #E1E1E2;
@@ -175,6 +175,7 @@ width:1200px;
   border-left: 0;
   padding: 10px;
   padding-bottom: 50px;
+  min-width: 980px;
  
 
 
@@ -290,8 +291,9 @@ margin-top: 5px;
 }
 
 .row {
-display: inline;
+display: block;
 width: 600px;
+text-align: left;
 
 }
 

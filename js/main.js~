@@ -2,22 +2,9 @@ $(document).ready(function() {
 	
 	
 	
-		$('#tablebody ').on('click', 'ul', function(){ 
-		
-		
-		$(this).children().toggleClass("linethrough")
-		});
 		
 
 	
-	/*$('#deleteAll').hover(function () {
-		alert('hello';)
-		$(this).css("background-color","#b8c6df");
-		},function () {
-		$(this).css("background-color","lightgrey");		
-		})
-	
-*/
 	
 
 
