@@ -78,24 +78,24 @@ $('#tablebody').on('mouseleave','li', function () {
    
     //  Prevent default refresh  
     
-   $('form').submit(function(event){ 
+ $('form').submit(function(event){ 
   			 event.preventDefault(); 
-   });
+  });
    
    
    
    
    
-   // add function
-		$('#formadd').click(function () {
+  // add function
+		$('#form1').submit(function () {
+		var formData = $(this).serialize();
 		
-			var itemValue =
-				$(':selected').val();
-			var qtyValue = 
-				$('input[name="qty"').val();
-							
-					
-					
+		console.log(formData);
+	   $.post('createSO.php',formData );
+						$('.form').hide();	
+				//		alert ('Entry Added');
+					})
+						 
 		 /* require form input values	
 			$('#formadd').validate({
 				rules:{
@@ -113,31 +113,13 @@ $('#tablebody').on('mouseleave','li', function () {
 				}
 		})	 
 		*/
-							
-					// append list with new items
-			$('.main #tablebody').append(
-			'<div class="row">'+
-			'<ul >'+
-				'<li  >'+ itemValue +
-				'</li>'+
-				'<li  class"qty">'+ qtyValue +
-				'</li>' +
-					
-				'</ul>' +
-				'<button class="button" id="editButton">' +
-				'</button>' +
-			
-				'<button class="button" id="deleteButton">' +
-				'</button>' +
-				'</div>' +
-				'<br>'
 				
-			
-				 
-			);
+							
+							
+		
 			 $('.form').hide();
 			
-			});				
+						
 				
 				
     // form cancel

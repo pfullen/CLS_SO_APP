@@ -18,7 +18,7 @@
         <link href='http://fonts.googleapis.com/css?family=Oswald:400:700' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="http://code.jquery.com/jquery.min.js"></script>
- 	 <script src="js/main.js"></script>
+   	 <script src="js/main.js"></script>
          <script src="js/plugins.js"></script>
    
           
@@ -31,24 +31,13 @@
 
         	<div class="main"> 
         	       <div id="main buttons">
-	     				 <button class="button" id="deleteAll"> </button>
+	     				
 			          <button class "add" id="addButton">  </button>
+			  
 					</div>     
 					
 				<h1> Service Order Entry  </h1>					
-					     
-			<div id='table'>          
-			
-				 <ul class="thead">				
-				 		<li > Product </li>
-				 	   <li >Qty </li> 
-				 	   
-				 	    </ul>
-				 
-				 
-			</div>	 
-				 <div id="tablebody">
-			
+		
 			<!--
 				 <ul>
 					
@@ -81,8 +70,8 @@
         	
         	<form id="form1" name="form1" method="post" action="">
         	<div class="input">
-	
-        	<select align= "center">
+	<input name="customer"> Customer </input> <br>
+        	<select align= "center" name="product">
   <option value="FLAT SHEET">FLAT SHEET</option>
   <option value="FITTED SHEET">FITTED SHEET</option>
   <option value="XL FITTED SHEET">XL FITTED SHEET</option>
@@ -111,9 +100,13 @@
   Qty   <input id="qty" type = "number" name="qty" align = "center" min="1" max="100"> 
 
         	<br>
+       <input id="notes" name = "notes" height="200px" width="300px"> Notes: </input>
+        	<br> 
     			</div>
+    			 	
     			<div class="formButtons">
-        		<button class="add2" id="formadd">  Add Item </button>
+    			     
+        		<button id="submit" class="add2"> Submit   </button>
         		<button class="add2" id="cancel">  Cancel </button>
         		</div>
         	</form>
