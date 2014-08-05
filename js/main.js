@@ -29,17 +29,7 @@ $('#tablebody').on('mouseleave','li', function () {
 
 
 
-
-/*
-	$('#tablebody li').hover(function(){ 
-	   
-		
-		$(this).parent().css("background-color","#b8c6df");
-		},function () {
-		$(this).parent().css("background-color","");		
-		});
-  
-*/  
+ 
 
 
    
@@ -71,9 +61,9 @@ $('#tablebody').on('mouseleave','li', function () {
 				$('input[name="qty"').val("");
 				var notes =
 					$('input[name="notes"').val("");
-							
+		$('div.main').hide();					
 		$('.form').show();
-    
+      
     
     });
     
@@ -89,15 +79,20 @@ $('#tablebody').on('mouseleave','li', function () {
    
    
   // add function
-		$('#form1').submit(function () {
+  $('#submit').click (function () {
+  $('#submit').on()
+		$('form').submit (function () {
 		var formData = $(this).serialize();
 		
-		console.log(formData);
-	   $.post('createSO.php',formData, processData );
-						$('.form').hide();	
+     console.log(formData);		
+		
+		
+	   $.post('createSO.php',formData, processData ); 
+						$('.form').hide();
+						$('.main').show();	
 				//		alert ('Entry Added');
 					})
-						 
+					});						 
 		 /* require form input values	
 			$('#formadd').validate({
 				rules:{
@@ -115,11 +110,77 @@ $('#tablebody').on('mouseleave','li', function () {
 				}
 		})	 
 		*/
+		
+//  add a new product and Qty line funcution		
+		$('#newline').on('click', function () {
+			
+			
+	
+			
+ 			
+			$('.input').append('<br>' + '<select align= "center" name="product" >'+ 
+												 '<option value="" disabled selected>' + 'Products' + '</option>'+
+								'<option value="FLAT SHEET">' + 'FLAT SHEET' + '</option>' +
+  '<option value="FITTED SHEET">' + 'FITTED SHEET' + '</option>' +
+  '<option value="XL FITTED SHEET">' + 'XL FITTED SHEET' + ' </option>' +
+  '<option value="1/2 SHEET">' + '1/2SHEET' + '</option>' +
+  '<option value="GOWN">' + 'GOWN' + '</option>'+
+  '<option value="3X GOWN">' + '3X GOWN' + '</option>' +
+  '<option value="PEDIATRIC GOWN">' + 'PEDIATRIC GOWN' + '</option>' +
+  '<option value="SURGICAL GOWN">' + 'SURGICAL GOWN' + '</option>' +
+  '<option value="BATH BLANKET">' + 'BATH BLANKET' + '</option>' +
+  '<option value="THERMAL BLANKET">' + 'THERMAL BLANKET' + '</option>'+
+  '<option value="PEDIATRIC BLANKET">' + 'PEDIATRIC BLANKET' + '</option>'+
+  '<option value="PILLOW CASE">' + 'PILLOW CASE' + '</option>'+
+  '<option value="WASH CLOTH">' + 'WASH CLOTH' + '</option>'+
+  '<option value="HAND TOWEL">' + 'HAND TOWEL' + '</option>' +
+  '<option value="BATH TOWEL">' + 'BATH TOWEL' + '</option>' +
+  '<option value="OR TOWEL">' + 'OR TOWEL' + '</option>' +
+  '<option value="MOPS ">' + 'MOPS' + '</option>' +
+  '<option value="OR CURTAINS">' + 'OR CURTAINS' + '</option>' +
+  '<option value="SCRUB TOP">' + 'SCRUB TOP' + '</option>'+
+  '<option value="SCRUB BOTTOM">' + 'SCRUB BOTTOM' + '</option>'+
+  '<option value="LAB COATS">' + 'LAB COATS' + '</option>'+
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+											'<input id="qty" type = "number" name="qty" align = "center" min="1" max="100" placeholder="QTY">'
+			
+			);
+			
+			
+		
+			
+			
+			
+			
+			});
+			
+			
+			
+			
+			
+			
+			
 				
 	function processData(data) {
 							
 							
-				$('#main').append ('<p> You entry was sucessfully updated </p>');
+				$('#main     ').append ('<p> You entry was sucessfully updated </p>');
 				
 													
 							

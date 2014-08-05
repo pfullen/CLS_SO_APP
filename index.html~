@@ -37,41 +37,30 @@
 					</div>     
 					
 				<h1> Service Order Entry  </h1>					
-		
-			<!--
-				 <ul>
-					
-						<li > </li>
-						<li > </li>
-						<li  >Bakery</li>
-				
-						
-						 	<button class="button" id="editButton"></button> 
-							<button class="button" id="deleteButton"></button> 
-									</ul>
-				
-						<ul>
-					
-						<li > Beer</li>
-						<li  > 12</li>
-						<li  >Beverage</li>
-						
-						 	<button class="button" id="editButton"></button> 
-							<button class="button" id="deleteButton"></button> 
-							
-				</ul>
-				-->
+		      <h2> </h2>
+			
 			  </div>
 			  	
 		
-			          	
-        	
+			
+				
         	<div class="form">
         	
+        	
         	<form id="form1" name="form1" method="post" action="">
-        	<div class="input">
-	<input name="customer"> Customer </input> <br>
-        	<select align= "center" name="product">
+        		<h2> Service Order Entry  </h2>	
+      
+	
+
+
+<input name="customer" placeholder="Customer">  
+	
+	      	
+        	<br>
+        	<div class="input">  	
+	
+ <select align= "center" name="product" >
+  <option value="" disabled selected>Products </option>
   <option value="FLAT SHEET">FLAT SHEET</option>
   <option value="FITTED SHEET">FITTED SHEET</option>
   <option value="XL FITTED SHEET">XL FITTED SHEET</option>
@@ -94,25 +83,37 @@
   <option value="SCRUB BOTTOM">SCRUB BOTTOM</option>
   <option value="LAB COATS">LAB COATS</option>
 	
-  <br>
-  <br>
+  
   </select>
-  Qty   <input id="qty" type = "number" name="qty" align = "center" min="1" max="100"> 
+ 
+     <input id="qty" type = "number" name="qty" align = "center" min="1" max="100" placeholder="QTY">  
+</div>
+        	
+       
 
-        	<br>
-       <input id="notes" name = "notes" height="200px" width="300px"> Notes: </input>
-        	<br> 
-    			</div>
+       	<input id="newline" type = "submit"  > Add more lines   </input> 
+        		<button class="deletelines" id="cancel">  Clear form </button>
+     		
+						<br>     		
+                 	<br>
+                 	
+        	 <textarea rows="4" cols="50" placeholder="Notes:" id="notes" name="notes"></textarea> 
+       <br>
+       <br>
+        
+    			
     			 	
     			<div class="formButtons">
     			     
-        		<button id="submit" class="add2"> Submit   </button>
-        		<button class="add2" id="cancel">  Cancel </button>
+        	<button id="submit" class="add2"> Submit   </button>
+        	<button class="add2" id="cancel">  Cancel </button> 
         		</div>
+     
         	</form>
         	
          
       </div>
+      
 </section>
 		
 		

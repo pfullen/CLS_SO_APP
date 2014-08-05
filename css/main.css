@@ -108,7 +108,7 @@ padding: 0;
 margin: 0;
  background-image: url('../images/mainimage.jpg');
  background-repeat: no-repeat;
-background-size: 100% 250%;
+background-size: cover;
  
  
 }
@@ -168,7 +168,7 @@ padding: 2px;
   color: #C00000;
   text-align: center;
   background-color: #E1E1E2;
-  min-height: auto;
+  min-height: 100%;
   position: relative;
   margin: 0 auto;
   margin-bottom: 0px;
@@ -241,6 +241,13 @@ margin-top: 70px;
 
 
 
+h2 {
+
+text-align: center;
+margin-top: 5px;
+color:darkred;
+padding-top: 3px;
+}
 
 
 
@@ -464,11 +471,11 @@ margin-right: 10px;
 .form {
 display: none;
 position: relative;
-width: 30%;
+width: 35%;
 border: 2px black solid;
 border-radius:5px;
 padding: 10px;
-padding-top: 20px;
+padding-top: 5px;
 margin: 0 auto;
 margin-top: 10px;
 margin-bottom: 50px;
@@ -485,30 +492,30 @@ font-family: Oswell, sans-serif;
 font-weight: bold;
 +box-shadow: 10px 10px 5px #888888;
 
+min-height: 40%;
+}
+
+form {
+
+width: 35%;
+display: block;
+
+
 }
 
 
 
-.input {
-margin: 0 auto;
-padding:  5px;
-padding-bottom: 2px;
-padding-left: 10px;
-align:center;
-display: inline-block;
-
-}
 
 input {
 	border-radius:5px;
-width:80px;	
+
 margin: 0 auto;
-margin-left: 5px;
+
 
 padding:5px;
-
+display: inline;
 margin-bottom: 15px;
-text-align: center;
+text-align:left;
 
 
 
@@ -516,10 +523,9 @@ text-align: center;
 
 select {
 border-radius: 5px;
-padding:5px;
+padding: 5px;
 width:200px;
-margin-left: 10px;
-margin-right: 20px;
+margin: auto;
 }
 
 
@@ -546,7 +552,7 @@ margin-left: 25%;
 #form1 {
 margin-bottom: 0px;
 position: relative;
-display: block;
+display:inline;
 
 
 }
@@ -560,26 +566,40 @@ padding: 5px;
 
 .qty {
 
-margin-left: 10px;
-width: 15px;
 
+width: 15px;
+margin-left: -5px;
 
 }
 
 
 
 
-#notes {
+textarea {
 
 width: 200px;
 height: 75px;
+margin-left: 110px;
+margin-right: 110px;
 
 
 
 }
 
 
+.formbuttons {
+display: inline-block;
 
+
+}
+
+#submit {
+
+margin-left: 130px;
+
+
+}
+}
 
  #tbdata {
 	height: 600px;
@@ -597,13 +617,15 @@ position: fixed;
 bottom:0;
 width: 100%;
 height: 75px;
-
+z-index: -1;
+margin-top: 25px;
 background: #222222; 
 
 
 }
 
 footer p {
+	
 text-align: center;
 color: gray;
 font-size: .75em;
