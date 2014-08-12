@@ -11,16 +11,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+        
+   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /> 
+    
+     
+      
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Oswald:400:700' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="http://code.jquery.com/jquery.min.js"></script>
+        
+        
    	 <script src="js/main.js"></script>
          <script src="js/plugins.js"></script>
-   
+    <script src="//code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
           
     </head>
     <body>
@@ -53,13 +59,13 @@
 	
 
 
-<input name="customer" placeholder="Customer">  
+<input id = "customer" name="customer" placeholder="Customer" class="form-control txt-auto">  
 	
 	      	
         	<br>
         	<div class="input">  	
 	
- <select align= "center" name="product" >
+ <select align= "center" name="lineItem[0][product]" id="product" >
   <option value="" disabled selected>Products </option>
   <option value="FLAT SHEET">FLAT SHEET</option>
   <option value="FITTED SHEET">FITTED SHEET</option>
@@ -86,7 +92,8 @@
   
   </select>
  
-     <input id="qty" type = "number" name="qty" align = "center" min="1" max="100" placeholder="QTY">  
+     <input id="qty" type = "number" name="lineItem[0][qty]" align = "center" min="1" max="100" placeholder="QTY">  
+    
 </div>
         	
        
