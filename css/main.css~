@@ -108,7 +108,7 @@ padding: 0;
 margin: 0;
  background-image: url('../images/mainimage.jpg');
  background-repeat: no-repeat;
-background-size: 100%;
+background-size: cover;
  min-height: 100%;
  
 }
@@ -162,7 +162,7 @@ padding: 2px;
  
 .main {
 
- 
+  display: none;
   background-size:100% 150%;
   width:25%;
   color: #C00000;
@@ -503,6 +503,60 @@ display: block;
 margin-bottom: 100px;
 
 }
+
+
+
+.loginform {
+text-align: center;
+
+position: relative;
+width: 35%;
+border: 2px black solid;
+border-radius:5px;
+padding: 10px;
+padding-top: 5px;
+margin: 0 auto;
+margin-top: 25px;
+margin-bottom: 150px;
+font-weight: bold;
+background: : #lightgray; /* Old browsers */
+
+background: -moz-linear-gradient(top,  #b8c6df 0%, #6d88b7 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b8c6df), color-stop(100%,#6d88b7)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #b8c6df 0%,#6d88b7 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #b8c6df 0%,#6d88b7 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #b8c6df 0%,#6d88b7 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #b8c6df 0%,#6d88b7 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8c6df', endColorstr='#6d88b7',GradientType=0 ); /* IE6-9 */
+
+
+font-family: Oswell, sans-serif;
+font-weight: bold;
++box-shadow: 10px 10px 5px #888888;
+
+min-height: 100%;
+}
+
+.loginform h1 {
+width: 100%;
+height: 60px;
+background: white;
+background-image:  url('../images/logo-cls.png');
+background-size: 50%;
+background-repeat: no-repeat;
+background-position: center top;
+
+
+}
+
+
+
+
+
+
+
+
+
 
 
 

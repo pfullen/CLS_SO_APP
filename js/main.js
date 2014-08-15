@@ -8,22 +8,14 @@ $(document).ready(function() {
 	
 
 
- $('#tablebody').on('mouseenter','li', function () {
-	  
-	   
-	   
+ $('#tablebody').on('mouseenter','li', function () {   
 	$(this).parent().toggleClass("backgroundcolor");
-	//	},function () {
-	//$(this).parent().css("background-color","");		
+	
 		});
 
-$('#tablebody').on('mouseleave','li', function () {
-	  
-	   
-	   
+$('#tablebody').on('mouseleave','li', function () {  
 	$(this).parent().toggleClass("backgroundcolor");
-	//	},function () {
-	//$(this).parent().css("background-color","");		
+	
 		});
 
 
@@ -47,9 +39,55 @@ $('#tablebody').on('mouseleave','li', function () {
 		$(this).css("background-color","");		
 		});
 	
+
+
+
+
+
+
+// login function
+ $('#pwsubmit').click (function () {
+		$('.loginform').submit (function () {
+	   event.preventDefault();
+			
+		
+			
+			
+	  var formData = $('form').serializeArray();
+	  var formJSON =	JSON.stringify(formData);
+     alert('The login submit button was clicked');
+     console.log(formJSON);	
+		
+			
 	
-	//$('td').hover(function () {
-	//$(this).addClass('linethrough');
+   $.post('login.php',formData, loginResults ); 
+		
+		 
+		  function loginResults(data) {
+		  console.log(data);
+		  
+		   
+	  		if (data=== 1) {
+		  			console.log(data);
+		  		$('.loginform').append('<p id="pass"> Correct login information.   </p>');
+		  		 $('.loginform').hide();
+			   $('.main').show();
+		  		
+		  		
+		  		}  else {
+		  			
+		  		$('.loginform').append('<p> You reached Else' + data + ' </p>');
+		  	
+		  }
+		}  
+		});/ end of process data */
+	}) ; // end of pwsubmit function 
+	
+		
+		
+		
+
+
 	
 	//  click + to show form   reset form values to null
 	
@@ -71,6 +109,12 @@ $('#tablebody').on('mouseleave','li', function () {
     //  Prevent default refresh  
     
  
+
+
+
+
+
+
    
    
    
