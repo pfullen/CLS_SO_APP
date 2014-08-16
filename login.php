@@ -1,6 +1,6 @@
 <?php
 
-if (php_sapi_name() != 'cli') echo '<pre>'.PHP_EOL;
+//if (php_sapi_name() != 'cli') echo '<pre>'.PHP_EOL;
 
 // change db name and credentials in this file
    session_start();
@@ -29,19 +29,18 @@ if (php_sapi_name() != 'cli') echo '<pre>'.PHP_EOL;
 
 // User Redirect Conditions will go here
    if ($count==1)	{
-	$value = true;
 	
-	
+	$return = 1;
+		
 } else {
 	
-	$value =false;
+	$return="fail";
 	
 	
 
 	}
 	
-	echo ($value);
-	
+	echo json_encode($return);	
 // Closing MySQL database connection 
     $dbh = null;
 ?>
