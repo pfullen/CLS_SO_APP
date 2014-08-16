@@ -8,15 +8,19 @@ require_once('./db_config.php');
 
 
 
-$customer = $_POST["customer"];
+$customerId = $_POST["customer"];
 $notes = $_POST["notes"];
 $lineItem =$_POST["lineItem"];
-$driverid = "27"; 
+$userId = "27"; 
+
+echo $customerId;
+echo $notes;
+
 
 
 // add to salesOrder Table
-$fields = array( 'customer' => $customer,   'notes' =>  $notes, 'salesOrderDate' => date('Y-m-d H:i:s'), 'driverid' => $driverid);
-
+$fields = array( 'customerId' => $customerId,   'notes' =>  $notes, 'salesOrderDate' => date('Y-m-d H:i:s'), 'userId' => $userId);
+   
 $sql = $cMySQL->createInsert('salesorders', $fields);
 echo 'SQL: '.$sql.PHP_EOL;
 $insertID = $cMySQL->execQ($sql, $fields);

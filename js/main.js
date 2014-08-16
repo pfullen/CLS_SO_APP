@@ -55,20 +55,25 @@ $('#tablebody').on('mouseleave','li', function () {
 			
 	  var formData = $('form').serializeArray();
 	  var formJSON =	JSON.stringify(formData);
-     alert('The login submit button was clicked');
+    
      console.log(formJSON);	
 		
 			
 	
    $.post('login.php',formData, loginResults ); 
 		
-		 
+		
 		  function loginResults(data) {
-		  console.log(data);
 		  
-		   
-	  		if (data=== 1) {
-		  			console.log(data);
+		   var result = data.trim();
+		  
+		  console.log(result);
+		  
+		  
+		
+	  		if (result == 1) {
+		  			console.log('login is correct '+ result);
+		  			
 		  		$('.loginform').append('<p id="pass"> Correct login information.   </p>');
 		  		 $('.loginform').hide();
 			   $('.main').show();
@@ -76,7 +81,8 @@ $('#tablebody').on('mouseleave','li', function () {
 		  		
 		  		}  else {
 		  			
-		  		$('.loginform').append('<p> You reached Else' + data + ' </p>');
+		  		$('.loginform').append('<p> The Login and password combination are not correct!!  Please re-enter.  </p>');
+		  		
 		  	
 		  }
 		}  
@@ -119,7 +125,8 @@ $('#tablebody').on('mouseleave','li', function () {
    
    
     
-  // add function
+  // submit to server 
+  
  $('#submit').click (function () {
 		$('form').submit (function () {
 	   event.preventDefault();
@@ -141,12 +148,15 @@ $('#tablebody').on('mouseleave','li', function () {
 	
 	
 	$('form').submit (function () {
-	      event.preventDefault();
+	     event.preventDefault();
 		
 });
+
+
+
 //  add a new product and Qty line funcution		
 	 
-      $('#newline').click(function(){
+      $('#newline').click (function(){
     $('.input:first').clone(true).hide().insertAfter('.input:last').slideDown('slow');
         var last = $('.input:last');
         var current =  $(".input").length - 1;

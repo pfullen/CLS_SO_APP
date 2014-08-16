@@ -162,7 +162,6 @@ padding: 2px;
  
 .main {
 
-  display: none;
   background-size:100% 150%;
   width:25%;
   color: #C00000;
