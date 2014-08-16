@@ -46,7 +46,7 @@ $('#tablebody').on('mouseleave','li', function () {
 
 
 // login function
- $('#pwsubmit').click (function () {
+ $('.loginform').on ('click tap','#pwsubmit',  (function () {
 		$('.loginform').submit (function () {
 	   event.preventDefault();
 			
@@ -87,7 +87,8 @@ $('#tablebody').on('mouseleave','li', function () {
 		  }
 		}  
 		});/ end of process data */
-	}) ; // end of pwsubmit function 
+		
+	})) ; // end of pwsubmit function 
 	
 		
 		
@@ -97,7 +98,7 @@ $('#tablebody').on('mouseleave','li', function () {
 	
 	//  click + to show form   reset form values to null
 	
-    $('#addButton').click(function () {
+    $('#main_buttons').on('click tap','#addButton', (function () {
     	
     	var itemValue =
 				$('input[name="customer"').val("");
@@ -109,7 +110,7 @@ $('#tablebody').on('mouseleave','li', function () {
 		$('.form').show();
       
     
-    });
+    }));
     
    
     //  Prevent default refresh  
@@ -127,7 +128,7 @@ $('#tablebody').on('mouseleave','li', function () {
     
   // submit to server 
   
- $('#submit').click (function () {
+ $('#form1').on ('click tap', '#submit', (function () {
 		$('form').submit (function () {
 	   event.preventDefault();
 			
@@ -143,7 +144,7 @@ $('#tablebody').on('mouseleave','li', function () {
 			$('.main').show();	
 				//		alert ('Entry Added');
 			})
-			}); 						 
+			})); 						 
 	
 	
 	
@@ -156,7 +157,7 @@ $('#tablebody').on('mouseleave','li', function () {
 
 //  add a new product and Qty line funcution		
 	 
-      $('#newline').click (function(){
+      $('#form1').on ('click tap', '#newline', (function(){
     $('.input:first').clone(true).hide().insertAfter('.input:last').slideDown('slow');
         var last = $('.input:last');
         var current =  $(".input").length - 1;
@@ -165,7 +166,7 @@ $('#tablebody').on('mouseleave','li', function () {
         last.find('select').attr("name", "lineItem[" + current + "][product]");
         last.find('input').val([]);
         last.find('input').attr("name", "lineItem[" + current + "][qty]");
-    });
+    }));
 
 
 
