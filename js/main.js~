@@ -128,7 +128,7 @@ $('#tablebody').on('mouseleave','li', function () {
     
   // submit to server 
   
- $('#submit').click (function () {
+ $('#form1').on ('click tap', '#submit', (function () {
 		$('form').submit (function () {
 	   event.preventDefault();
 			
@@ -139,12 +139,13 @@ $('#tablebody').on('mouseleave','li', function () {
 	  var formJSON =	JSON.stringify(formData);
 
      console.log(formJSON);	
-		   $.post('createSO.php',formData ); 
+		   $.post('createSO.php',formData );
+		   alert('The following records have been added:' + formData); 
 				$('.form').hide();
 			$('.main').show();	
 				//		alert ('Entry Added');
 			})
-			}); 						 
+			})); 						 
 	
 	
 	

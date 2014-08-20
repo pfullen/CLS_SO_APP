@@ -139,7 +139,8 @@ $('#tablebody').on('mouseleave','li', function () {
 	  var formJSON =	JSON.stringify(formData);
 
      console.log(formJSON);	
-		   $.post('createSO.php',formData ); 
+		   $.post('createSO.php',formData );
+		   alert('The following records have been added:' + formJSON); 
 				$('.form').hide();
 			$('.main').show();	
 				//		alert ('Entry Added');
